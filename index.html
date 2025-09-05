@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment Management Portal</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>📚 Assignment Management System</h1>
+  </header>
+
+  <section class="hero">
+    <p>Streamlining submissions, grading, and progress tracking for modern education.</p>
+  </section>
+
+  <section class="upload">
+    <h2>Student PDF Submission</h2>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="text" name="student_name" placeholder="Your Name" required />
+      <input type="file" name="pdf_file" accept=".pdf" required />
+      <button type="submit">Submit Assignment</button>
+    </form>
+  </section>
+
+  <section class="grading">
+    <h2>Teacher Grading Panel</h2>
+    <form action="/grade" method="POST">
+      <input type="text" name="student_name" placeholder="Student Name" required />
+      <textarea name="feedback" placeholder="Feedback..." required></textarea>
+      <input type="number" name="question1" placeholder="Q1 Marks" min="0" />
+      <input type="number" name="question2" placeholder="Q2 Marks" min="0" />
+      <input type="number" name="question3" placeholder="Q3 Marks" min="0" />
+      <button type="submit">Submit Grades</button>
+    </form>
+  </section>
+</body>
+</html>
